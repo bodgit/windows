@@ -14,7 +14,7 @@ const offset int64 = 116444736000000000
 // Filetime mirrors the Windows FILETIME structure which represents time
 // as the number of 100-nanosecond intervals that have elapsed since
 // 00:00:00 UTC, January 1, 1601. This code is taken from the
-// golang.org/x/sys/windows package so it's not available for non-Windows
+// golang.org/x/sys/windows package where it's not available for non-Windows
 // platforms however various file formats and protocols pass variations of
 // this type about so it's useful to have it available for interoperability
 // purposes. It implements the encoding.BinaryMarshaler and
