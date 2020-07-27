@@ -2,11 +2,6 @@
 // are useful on non-Windows platforms.
 package windows
 
-import (
-	"bytes"
-	"encoding/binary"
-)
-
 // Taken from golang.org/x/sys/windows
 
 const offset int64 = 116444736000000000
@@ -15,21 +10,11 @@ const offset int64 = 116444736000000000
 // as the number of 100-nanosecond intervals that have elapsed since
 // 00:00:00 UTC, January 1, 1601. This code is taken from the
 // golang.org/x/sys/windows package where it's not available for non-Windows
-// platforms however various file formats and protocols pass variations of
-// this type about so it's useful to have it available for interoperability
-// purposes. It implements the encoding.BinaryMarshaler and
-// encoding.BinaryUnmarshaler interfaces.
+// platforms however various file formats and protocols pass this structure
+// about so it's useful to have it available for interoperability purposes.
 type Filetime struct {
 	LowDateTime  uint32
 	HighDateTime uint32
-}
-
-// MarshalBinary encodes Filetime ft into a binary form and returns the
-// result.
-func (ft *Filetime) MarshalBinary() ([]byte, error) {
-	w := new(bytes.Buffer)
-	_ = binary.Write(w, binary.LittleEndian, ft)
-	return w.Bytes(), nil
 }
 
 // Nanoseconds returns Filetime ft in nanoseconds
@@ -42,12 +27,6 @@ func (ft *Filetime) Nanoseconds() int64 {
 	// convert into nanoseconds
 	nsec *= 100
 	return nsec
-}
-
-// UnmarshalBinary decodes Filetime ft from binary form.
-func (ft *Filetime) UnmarshalBinary(b []byte) error {
-	r := bytes.NewBuffer(b)
-	return binary.Read(r, binary.LittleEndian, ft)
 }
 
 // NsecToFiletime converts nanoseconds to the equivalent Filetime type.
