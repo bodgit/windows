@@ -1,19 +1,21 @@
-package windows
+package windows_test
 
 import (
 	"fmt"
 	"time"
+
+	"github.com/bodgit/windows"
 )
 
 func ExampleNsecToFiletime() {
-	ft := NsecToFiletime(time.Date(2020, 7, 20, 17, 15, 10, 0, time.UTC).UnixNano())
+	ft := windows.NsecToFiletime(time.Date(2020, 7, 20, 17, 15, 10, 0, time.UTC).UnixNano())
 
 	fmt.Println(ft)
 	// Output: {1384030976 30826169}
 }
 
 func ExampleFiletime_Nanoseconds() {
-	ft := Filetime{
+	ft := windows.Filetime{
 		1384030976,
 		30826169,
 	}
