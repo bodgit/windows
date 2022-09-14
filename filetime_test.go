@@ -14,7 +14,7 @@ func ExampleNsecToFiletime() {
 	// Output: {1384030976 30826169}
 }
 
-func ExampleFiletime_Nanoseconds() {
+func ExampleFiletime_Nanoseconds() { //nolint:nosnakecase
 	ft := windows.Filetime{
 		1384030976,
 		30826169,
