@@ -1,5 +1,5 @@
 [![GitHub release](https://img.shields.io/github/v/release/bodgit/windows)](https://github.com/bodgit/windows/releases)
-[![Build Status](https://img.shields.io/github/workflow/status/bodgit/windows/build)](https://github.com/bodgit/windows/actions?query=workflow%3Abuild)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/bodgit/windows/main.yml?branch=main)](https://github.com/bodgit/windows/actions?query=workflow%3Abuild)
 [![Coverage Status](https://coveralls.io/repos/github/bodgit/windows/badge.svg?branch=main)](https://coveralls.io/github/bodgit/windows?branch=main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/bodgit/windows)](https://goreportcard.com/report/github.com/bodgit/windows)
 [![GoDoc](https://godoc.org/github.com/bodgit/windows?status.svg)](https://godoc.org/github.com/bodgit/windows)
