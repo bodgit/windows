@@ -3,8 +3,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/bodgit/windows/badge.svg?branch=main)](https://coveralls.io/github/bodgit/windows?branch=main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/bodgit/windows)](https://goreportcard.com/report/github.com/bodgit/windows)
 [![GoDoc](https://godoc.org/github.com/bodgit/windows?status.svg)](https://godoc.org/github.com/bodgit/windows)
+![Go version](https://img.shields.io/badge/Go-1.19-brightgreen.svg)
 ![Go version](https://img.shields.io/badge/Go-1.18-brightgreen.svg)
-![Go version](https://img.shields.io/badge/Go-1.17-brightgreen.svg)
 
 windows
 =======
